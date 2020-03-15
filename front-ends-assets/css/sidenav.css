@@ -83,9 +83,9 @@
  }
  
  .burger-color {
-     color: #fff;
-     font-size: 30px;
-     margin-top: 32px;
+    color: #000;
+    font-size: 30px;
+    margin-top: 15px;
  }
  
  .dropdown-item.active,
@@ -100,9 +100,10 @@
  }
  
  .mobile-logo {
-     color: #fff;
-     font-size: 18px;
-     height: 90px;
+    color: #fff;
+    font-size: 18px;
+    height: 80px;
+    padding: 12px;
  }
  
  .bor-nav-tran {
@@ -116,6 +117,11 @@
      color: #f0f0f0;
      width: 180px;
      height: 40px;
+ }
+ .btn-register:hover{
+    background-color: #080808;
+    border: 1px solid #080808;
+    color: #f0f0f0;
  }
  
  .posit {
@@ -212,13 +218,13 @@
  
  .po-si-r {
      position: absolute;
-     right: 20px;
+     left: 20px;
  }
  
  .nav-mobile {
      z-index: 2001;
      position: relative;
-     background-color: #000;
+     background-color: #fff;
  }
  
  .banner-home-mobile {
@@ -242,17 +248,65 @@
      .banner-home-mobile {
          display: block;
      }
+     .btn-login {
+        background-color: #000000;
+        border: 2px solid #C80000;
+        color: #f0f0f0;
+        width: 170px;
+        height: 41px;
+        position: absolute;
+        right: 20px;
+        margin-top: 26px;
+    }
  }
- 
- @media screen and (max-height: 450px) {
+ @media screen and (min-width:0px) and (max-width:450px) {
      .sidenav {
          padding-top: 15px;
      }
      .sidenav a {
          font-size: 18px;
      }
+     .posit {
+        position: relative !important;
+        right: auto !important;
+        text-align: center;
+    }
+    .btn-register {
+        width: 130px;
+        display: inline-block;
+        height: 40px;
+        margin: 0 4px;
+        text-align: center;
+    }
+    .btn-login {
+        background-color: #000000;
+        border: 2px solid #C80000;
+        color: #f0f0f0;
+        width: 170px;
+        height: 41px;
+        position: absolute;
+        right: 20px;
+        margin-top: 26px;
+    }
+  
  }
  
  .icon-destop {
-     width: 287px;
+     width: 281px;
+     padding: 15px 0px;
+ }
+ .posit a:hover{
+    text-decoration: none;
+ }
+ .btn-login{
+    background-color: #000000;
+    border: 2px solid #C80000;
+    color: #f0f0f0;
+    width: 170px;
+    height: 41px;
+ }
+ .btn-login:hover{
+    background-color: #000000;
+    border: 2px solid #C80000;
+    color: #f0f0f0;
  }

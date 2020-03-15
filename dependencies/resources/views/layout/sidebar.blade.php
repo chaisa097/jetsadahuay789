@@ -2,7 +2,7 @@
 <div class="d-flex">
     <div class="text-center m-auto nav-top-logo header-color">
         <a href="{{route('index','home')}}">
-          <img class="icon-destop" src="{{ asset('front-ends-assets/images/huay789.svg')}}" >
+          <img class="icon-destop" src="{{ asset('front-ends-assets/images/HUAY789.svg')}}" >
         </a>
     </div>
     <div class="left-content header-color  mt-4"> 
@@ -14,12 +14,13 @@
                 Phone :  <a style="color:inherit" href="tel:{{$con->name}}">{{$con->name}}<a> <br>
                 @elseif($con->type == 2)
                 ID Line : {{$con->name}} <br>
-                @elseif($con->type == 3)
-                Email : {{$con->name}} <br>
-                @endif
+                {{-- @elseif($con->type == 3)
+                Email : {{$con->name}} <br> --}}
+               @endif
             @endif
             @endforeach
              </div>
+              <div><a class="btn btn-login"  href="{{ $settings->login }}">เข้าสู่ระบบ</a></div> 
             </div>
         </div>
 </div>
@@ -39,7 +40,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#"><span class="text-upderline">สมัครสมาชิก</span></a>
+                        <a class="nav-link " href="{{ $settings->register }}"><span class="text-upderline">สมัครสมาชิก</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ $settings->login }}"><span class="text-upderline">เข้าสู่ระบบ</span></a>
                     </li>
                     <li class="nav-item {{$seo->slug == 'pay_rate'?'active':''}}">
                         <a class="nav-link " href="{{route('index','pay_rate')}}">อัตราการจ่าย</a>
@@ -93,19 +97,22 @@
 <div class="nav-mobile">
     <div class="inside-nav d-flex">
        <div class="m-auto ">
-            <img class="mobile-logo" src="{{asset('front-ends-assets/images/huay789.svg')}}" >
+            <img class="mobile-logo" src="{{asset('front-ends-assets/images/HUAY789.svg')}}" >
         </div>
        <span class="color-w po-si-r burger-color" style="cursor:pointer " onclick="openNav()">&#9776;</span>
+       {{-- <div><a class="btn btn-login"  href="{{ $settings->register }}">เข้าสู่ระบบ</a></div>  --}}
     </div>
     {{-- <div class="help-contact px-2 text-center">ID LINE : raklotto2 ,Tel : 062-4026406 </div> --}}
 <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="{{route('index','home')}}">หน้าหลัก</a>
-        <a href="#">สมัครสมาชิก</a>
+        <a href="{{ $settings->register }}">สมัครสมาชิก</a>
+        <a href="{{ $settings->login }}">เข้าสู่ระบบ</a>
         <a href="{{route('index','pay_rate')}}">อัตราการจ่าย</a>
         <a href="{{route('index','special_privileges')}}">สิทธิพิเศษ</a>
         <a href="{{route('index','business_partner')}}">หุ้นส่วนธุรกิจ</a>
         <a href="{{route('index','rules')}}">กติกา</a>
+  
         {{-- <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">ดูผลหวย</a>
     <div class="dropdown-menu" aria-labelledby="dropdown01">

@@ -115,13 +115,13 @@
 @endif
 @endforeach
 <div class="container-fluid fixed-top tap-color">
-    <div class="">
+    <div class="text-center">
             <div class="py-2 posit">
-                    <a href="#">
+                    <a class="text-upderline-none" href="{{ $settings->register }}">
                     <button class="btn btn-register">สมัครสมาขิก </button>
                     </a>
-                    <a href="#">
-                     <button class="btn btn-register">เข้าสู่เว็บไซค์ </button>
+                    <a href="{{ $settings->login }}">
+                     <button class="btn btn-register">เข้าสู่ระบบ </button>
                     </a>
                 </div>
     </div>
